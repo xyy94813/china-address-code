@@ -1,0 +1,36 @@
+{
+  "name": "china-address-code",
+  "version": "0.0.1",
+  "description": "Crawl address code from government official website",
+  "main": "lib/core.js",
+  "dependencies": {
+    "bunyan": "^1.8.12",
+    "commander": "^2.19.0",
+    "puppeteer-core": "^1.11.0"
+  },
+  "bin": {
+    "china-address-code": "bin/china-address-code.js"
+  },
+  "devDependencies": {
+    "dotenv-cli": "^1.4.0"
+  },
+  "scripts": {
+    "build": "node bin/china-address-code.js",
+    "build:dotenv": "dotenv npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xyy94813/china-address-code.git"
+  },
+  "keywords": [
+    "China",
+    "address code",
+    "divisions of China"
+  ],
+  "author": "xyy94813@sina.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xyy94813/china-address-code/issues"
+  },
+  "homepage": "https://github.com/xyy94813/china-address-code#readme"
+}
