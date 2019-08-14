@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const program = require("commander");
 const path = require("path");
-
+const fs = require("fs");
 const main = require("../lib/core");
 const { version } = require("../package.json");
 
@@ -23,6 +23,14 @@ program
     process.env.OUTPUT_DIR || "dist"
   )
   .parse(process.argv);
+
+const DIR_PATH = path.join(process.cwd(), program.output);
+
+try {
+  fs.readdirSync(DIR_PATH);
+} catch (error) {
+  fs.mkdirSync(DIR_PATH);
+}
 
 const OUT_PATH = path.join(program.output, "china_address_code.json");
 const ALL_PROVINCE_PATH = path.join(
