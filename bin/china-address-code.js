@@ -18,7 +18,7 @@ function getChromiumPath() {
   return program.chromium || resolveArgPath(process.env.CHROMIUM_PATH);
 }
 
-function getOuputDirPath() {
+function getOutputDirPath() {
   return program.output || resolveArgPath(process.env.OUTPUT_DIR || 'dist');
 }
 
@@ -28,7 +28,7 @@ if (!CHROMIUM_PATH) {
   throw Error('Miss chromium path.');
 }
 
-const DIR_PATH = getOuputDirPath();
+const DIR_PATH = getOutputDirPath();
 
 try {
   fs.readdirSync(DIR_PATH);
